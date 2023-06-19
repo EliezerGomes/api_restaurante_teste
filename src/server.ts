@@ -8,4 +8,4 @@ app.use(cors())
 app.use(express.json())
 app.use(routes)
 
-app.listen(process.env.PORT || 3000, () => console.log("Server is running"))
+app.listen({port: process.env.PORT || 3000, host: "0.0.0.0", calback: () => {console.log("server is running")}})
